@@ -5,224 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Westbourne Community Centre — Demo</title>
   <meta name="description" content="Friendly community hub in Islington offering room hire, events, and support." />
-  <meta property="og:title" content="Westbourne Community Centre — Demo" />
-  <meta property="og:description" content="A welcoming space in Islington with affordable room hire and activities for all ages." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/lvw1/-westbourne-centre-demo/main/WESTBOURNE%20COMMUNITY.png" />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Focus outline for keyboard users */
-    :focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
-  </style>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white px-3 py-2 rounded shadow">Skip to content</a>
-
   <!-- Header -->
   <header class="bg-blue-700 text-white">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a class="flex items-center gap-3" href="#" aria-label="Home">
-        <img src="https://raw.githubusercontent.com/lvw1/-westbourne-centre-demo/main/WESTBOURNE%20COMMUNITY.png" alt="Westbourne Community Centre logo" class="h-10 w-auto">
+      <a href="#" class="flex items-center gap-3">
+        <img src="https://github.com/lvw1/-westbourne-centre-demo/blob/main/WESTBOURNE%20COMMUNITY.png?raw=true" 
+             alt="Westbourne Community Centre logo" class="h-16 w-auto bg-white rounded-full p-1 shadow">
         <span class="text-lg md:text-xl font-semibold tracking-wide">Westbourne Community Centre</span>
       </a>
-
-      <!-- Desktop nav -->
-      <nav class="hidden md:block" aria-label="Primary">
+      <nav class="hidden md:block">
         <ul class="flex items-center gap-6 text-sm">
           <li><a href="#about" class="hover:underline">About</a></li>
           <li><a href="#rooms" class="hover:underline">Rooms</a></li>
-          <li><a href="#events" class="hover:underline">What’s On</a></li>
-          <li><a href="#visit" class="hover:underline">Visit</a></li>
+          <li><a href="#events" class="hover:underline">Events</a></li>
           <li><a href="#contact" class="hover:underline">Contact</a></li>
         </ul>
       </nav>
-
-      <!-- Mobile menu button -->
-      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
-        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
     </div>
-
-    <!-- Mobile nav -->
-    <nav id="mobileNav" class="md:hidden hidden border-t border-white/20" aria-label="Mobile">
-      <ul class="px-4 py-3 space-y-2 text-sm">
-        <li><a class="block py-1" href="#about">About</a></li>
-        <li><a class="block py-1" href="#rooms">Rooms</a></li>
-        <li><a class="block py-1" href="#events">What’s On</a></li>
-        <li><a class="block py-1" href="#visit">Visit</a></li>
-        <li><a class="block py-1" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
   <!-- Hero -->
-  <section class="bg-blue-50 border-b border-blue-100">
-    <div class="max-w-6xl mx-auto px-4 py-12 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold mb-3">A welcoming space for everyone</h1>
-      <p class="text-gray-700 max-w-2xl mx-auto">Affordable room hire, regular activities, and community support — right in the heart of Islington.</p>
-      <div class="mt-6 flex gap-3 justify-center">
-        <a href="#rooms" class="inline-flex items-center rounded bg-blue-700 text-white px-5 py-3 font-medium hover:bg-blue-800">View rooms</a>
-        <a href="#contact" class="inline-flex items-center rounded bg-white text-blue-700 px-5 py-3 font-medium border border-blue-200 hover:bg-blue-100">Get in touch</a>
-      </div>
-      <!-- Today’s hours -->
-      <div class="mt-8 inline-block bg-white rounded-xl shadow px-5 py-4 text-left">
-        <p class="font-semibold mb-2">Opening hours</p>
-        <ul id="hoursList" class="text-sm leading-6">
-          <li data-day="0">Sunday: Closed</li>
-          <li data-day="1">Monday: 09:00–17:00</li>
-          <li data-day="2">Tuesday: 09:00–17:00</li>
-          <li data-day="3">Wednesday: 09:00–17:00</li>
-          <li data-day="4">Thursday: 09:00–17:00</li>
-          <li data-day="5">Friday: 09:00–17:00</li>
-          <li data-day="6">Saturday: 10:00–14:00</li>
-        </ul>
-        <p class="text-xs text-gray-500 mt-2">* Demo data — replace with confirmed hours.</p>
+  <section class="bg-blue-50 p-8 text-center">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-3xl font-bold mb-4">A welcoming space for everyone</h1>
+      <p class="mb-6">Affordable room hire, regular activities, and community support in the heart of Islington.</p>
+      <a href="#contact" class="bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-5xl mx-auto p-8">
+    <h2 class="text-2xl font-semibold mb-4">About Us</h2>
+    <p>Westbourne Community Centre is a friendly, inclusive hub bringing neighbours together for social activities, learning, and support. We host classes, groups, and events, and offer affordable rooms for community use.</p>
+  </section>
+
+  <!-- Rooms -->
+  <section id="rooms" class="bg-white p-8">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">Rooms for Hire</h2>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="bg-gray-50 p-4 rounded shadow">
+          <h3 class="font-bold mb-2">Main Hall</h3>
+          <p>Spacious hall suitable for events, classes, and parties. Capacity: 80 people.</p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded shadow">
+          <h3 class="font-bold mb-2">Meeting Room</h3>
+          <p>Perfect for small group meetings or workshops. Capacity: 12 people.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <main id="main">
-    <!-- About -->
-    <section id="about" class="max-w-6xl mx-auto px-4 py-12">
-      <div class="grid md:grid-cols-2 gap-8 items-start">
-        <div>
-          <h2 class="text-2xl font-semibold mb-3">About us</h2>
-          <p class="text-gray-700">Westbourne Community Centre is a friendly, inclusive hub bringing neighbours together for social activities, learning, and support. We host classes, groups, and events, and offer affordable rooms for community use.</p>
-          <ul class="mt-4 text-gray-700 list-disc pl-5">
-            <li>Affordable room hire for groups and events</li>
-            <li>Regular activities for all ages</li>
-            <li>Accessible venue with step-free entry (demo text)</li>
-          </ul>
-        </div>
-        <div class="bg-white rounded-xl shadow p-5">
-          <h3 class="font-semibold mb-3">At a glance</h3>
-          <dl class="grid grid-cols-2 gap-3 text-sm">
-            <div><dt class="text-gray-500">Location</dt><dd>43 Roman Way, London N7 8XF</dd></div>
-            <div><dt class="text-gray-500">Phone</dt><dd>020 0000 0000</dd></div>
-            <div><dt class="text-gray-500">Email</dt><dd>info@westbourne-demo.org</dd></div>
-            <div><dt class="text-gray-500">Rooms</dt><dd>Hall & Meeting Room</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
+  <!-- Events -->
+  <section id="events" class="max-w-5xl mx-auto p-8">
+    <h2 class="text-2xl font-semibold mb-4">Upcoming Events</h2>
+    <ul class="list-disc pl-6">
+      <li>Yoga Class — Mondays at 6pm</li>
+      <li>Community Lunch — First Wednesday of the month</li>
+      <li>After School Club — Weekdays from 3:30pm</li>
+    </ul>
+  </section>
 
-    <!-- Rooms -->
-    <section id="rooms" class="bg-white">
-      <div class="max-w-6xl mx-auto px-4 py-12">
-        <h2 class="text-2xl font-semibold mb-6">Rooms for hire</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <article class="rounded-xl border border-gray-200 p-5 shadow-sm bg-gray-50">
-            <h3 class="font-bold mb-1">Main Hall</h3>
-            <p class="text-sm text-gray-700">Bright multi-use hall for classes, parties, and community events. Capacity ~80. Kitchen access. Chairs & tables available.</p>
-            <p class="mt-3 text-sm"><span class="font-medium">From £—</span> (demo)</p>
-            <a href="#contact" class="mt-4 inline-block text-blue-700 font-medium hover:underline">Enquire to book →</a>
-          </article>
-          <article class="rounded-xl border border-gray-200 p-5 shadow-sm bg-gray-50">
-            <h3 class="font-bold mb-1">Meeting Room</h3>
-            <p class="text-sm text-gray-700">Comfortable space for workshops and small groups. Capacity ~12. Whiteboard and Wi-Fi.</p>
-            <p class="mt-3 text-sm"><span class="font-medium">From £—</span> (demo)</p>
-            <a href="#contact" class="mt-4 inline-block text-blue-700 font-medium hover:underline">Enquire to book →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Events -->
-    <section id="events" class="max-w-6xl mx-auto px-4 py-12">
-      <h2 class="text-2xl font-semibold mb-4">What’s on</h2>
-      <ul class="grid md:grid-cols-3 gap-4 text-sm">
-        <li class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
-          <p class="font-medium">Yoga</p><p class="text-gray-600">Mondays · 6–7pm</p>
-        </li>
-        <li class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
-          <p class="font-medium">Community Lunch</p><p class="text-gray-600">First Wed · 12–2pm</p>
-        </li>
-        <li class="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
-          <p class="font-medium">After School Club</p><p class="text-gray-600">Weekdays · from 3:30pm</p>
-        </li>
-      </ul>
-      <p class="text-xs text-gray-500 mt-3">Demo schedule — replace with real activities.</p>
-    </section>
-
-    <!-- Visit -->
-    <section id="visit" class="bg-white">
-      <div class="max-w-6xl mx-auto px-4 py-12">
-        <h2 class="text-2xl font-semibold mb-3">Visit us</h2>
-        <div class="grid md:grid-cols-2 gap-6 text-sm">
-          <div class="space-y-2">
-            <p><span class="font-medium">Address:</span> 43 Roman Way, London N7 8XF</p>
-            <p><span class="font-medium">Transport:</span> Buses nearby; Caledonian Rd & Barnsbury Overground (demo text)</p>
-            <p><span class="font-medium">Accessibility:</span> Step-free entrance, accessible toilet (demo)</p>
-          </div>
-          <div class="rounded-xl overflow-hidden border border-gray-200">
-            <iframe title="Map" class="w-full h-64" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-0.120,51.54,-0.10,51.55&layer=mapnik">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="max-w-6xl mx-auto px-4 py-12">
-      <div class="bg-white rounded-xl shadow p-6">
-        <h2 class="text-2xl font-semibold mb-4">Contact us</h2>
-        <p class="text-sm text-gray-700 mb-4">Questions or bookings? Send a message and we’ll get back to you.</p>
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid md:grid-cols-2 gap-4">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="hidden">
-            <label>Don’t fill this out: <input name="bot-field" /></label>
-          </p>
-          <label class="text-sm">Name
-            <input required name="name" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
-          </label>
-          <label class="text-sm">Email
-            <input required type="email" name="email" class="mt-1 w-full rounded border border-gray-300 px-3 py-2" />
-          </label>
-          <label class="md:col-span-2 text-sm">Message
-            <textarea required name="message" rows="4" class="mt-1 w-full rounded border border-gray-300 px-3 py-2"></textarea>
-          </label>
-          <div class="md:col-span-2">
-            <button class="rounded bg-blue-700 text-white px-5 py-2 font-medium hover:bg-blue-800">Send</button>
-          </div>
-        </form>
-        <p class="text-xs text-gray-500 mt-3">Form is configured for static hosts like Netlify (demo). You can also list an email/phone above.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="mt-12 bg-blue-700 text-white">
-    <div class="max-w-6xl mx-auto px-4 py-6 text-sm flex flex-col md:flex-row items-center md:justify-between gap-3">
-      <p>© <span id="year"></span> Westbourne Community Centre — Demo by Lydia</p>
-      <p><a class="underline" href="#visit">Find us</a> · <a class="underline" href="#contact">Contact</a></p>
+  <!-- Contact -->
+  <section id="contact" class="bg-blue-50 p-8">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+      <p>📍 43 Roman Way, London N7 8XF</p>
+      <p>📞 020 1234 5678</p>
+      <p>✉️ info@westbournecentre.org</p>
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center p-4 mt-8">
+    <p>&copy; 2025 Westbourne Community Centre — Demo site by Lydia</p>
   </footer>
-
-  <script>
-    // Mobile menu toggle
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('mobileNav');
-    btn?.addEventListener('click', () => {
-      const open = nav.classList.toggle('hidden') === false;
-      btn.setAttribute('aria-expanded', String(open));
-    });
-
-    // Highlight today's hours
-    (function(){
-      const today = new Date().getDay(); // 0=Sun
-      const items = document.querySelectorAll('#hoursList [data-day]');
-      items.forEach(li => {
-        if (Number(li.dataset.day) === today) {
-          li.classList.add('font-semibold','text-blue-700');
-          li.innerHTML = 'Today — ' + li.textContent;
-        }
-      });
-    })();
-
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
+
